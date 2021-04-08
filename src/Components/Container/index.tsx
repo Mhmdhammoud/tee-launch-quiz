@@ -20,7 +20,6 @@ interface ImageProps extends Props {
 interface ListItemProps {
   href: string;
   title: string;
-  StartIcon?: React.ReactNode;
 }
 
 export const AppBar = (props: Props) => {
@@ -51,11 +50,10 @@ AppBar.LinksList = function (props: Props) {
   return <List>{children}</List>;
 };
 AppBar.Link = function (props: ListItemProps) {
-  const { title, href, StartIcon } = props;
+  const { title, href } = props;
   return (
     <ListItem>
       <Grid container>
-        {<StartIcon /> || null}
         <Link to={`/${href}`} style={{ color: '#fff' }}>
           {title}
         </Link>

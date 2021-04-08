@@ -1,8 +1,6 @@
 import React from 'react';
 import { AppBar } from '../Container';
 import { TextField } from '@material-ui/core';
-import PersonIcon from '@material-ui/icons/Person';
-import PersonAddIcon from '@material-ui/icons/PersonAdd';
 
 const index = () => {
   return (
@@ -23,12 +21,8 @@ const index = () => {
       </AppBar.Center>
       <AppBar.Right>
         <AppBar.LinksList>
-          <AppBar.Link href="/login" title="Login" StartIcon={<PersonIcon />} />
-          <AppBar.Link
-            href="/Sign-Up"
-            title="Register"
-            StartIcon={<PersonIcon />}
-          />
+          <AppBar.Link href="/login" title="Login" />
+          <AppBar.Link href="/Sign-Up" title="Register" />
         </AppBar.LinksList>
       </AppBar.Right>
     </AppBar>
